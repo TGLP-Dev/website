@@ -1,13 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site de l'entreprise TGLPdev">
-    <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
-    <title>TGLPdev</title>
-</head>
-<body>
-    <h1>Titre</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio de TGLP dev, entreprise de développement informatique">
+        <link rel="icon" type="image/x-icon" href="assets/logo/favicon.ico">
+        <title>TGLP dev</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body id="particles-js">
+        <!-- Header -->
+        <header class="site-header" id="navbar">
+            <nav class="navbar">
+                <a href="#about" class="navbutton">À propos</a>
+                <a href="#competences" class="navbutton">Compétences</a>
+                <a href="#projets" class="navbutton">Projets</a>
+                <a href="#experiences" class="navbutton">Expériences</a>
+                <a href="#contact" class="navbutton">Contact</a>
+            </nav>
+            <div class="logo">TGLP<span>.dev</span></div>
+        </header>
+        <!-- Présentation -->
+        <main>
+        <div class="paragraphe">
+            <section>
+                <p class="name">
+                    Présentation
+                </p>
+            </section>
+        </div>
+        <!-- A propos -->
+        <div class="paragraphe">
+            <section id="about">
+                <h2>À propos de nous</h2>
+            </section>
+        </div>
+        <!-- Compétences -->
+        <div class="paragraphe">
+            <section id="competences">
+                <h2>Nos compétences</h2>
+                    <div class="skills">
+                        <div class="cases">
+                            <span>Développement Web</span><br>
+                            HTML5, CSS3, JavaScript
+                        </div>
+                        <div class="cases">
+                            <span>Programmation</span><br>
+                            Python (avancé), notions en Lua, C++, C#
+                        </div>
+                        <div class="cases">
+                            <span>Données & Systèmes</span><br>
+                            Notions en SQL, bases de données, algorithmique
+                        </div>
+                        <div class="cases">
+                            <span>Réseaux & Gestion</span><br>
+                            Configuration réseau de base, gestion de projet, architecture informatique
+                        </div>
+                    </div>
+            </section>
+        </div>
+        <!-- Projets -->
+        <div class="paragraphe">
+            <section id="projets">
+                <h2>Nos projets</h2>
+                    <div class="projets">
+                        <div class="cases">
+                            <span>1</span><br>
+                            <strong>titre 1</strong><br>
+                            texte 1
+                        </div>
+                        <div class="cases">
+                            <span>2</span><br>
+                            <strong>titre 2</strong><br>
+                            texte 2
+                        </div>
+                    </div>
+            </section>
+        </div>
+        <!-- Expériences -->
+        <div class="paragraphe">
+            <section id="experiences">
+                <h2>Nos expériences</h2>
+                    <div class="work">
+                        <div class="cases">
+                            <span>1</span><br>
+                            texte 1
+                        </div>
+                        <div class="cases">
+                            <span>2</span><br>
+                           texte 2
+                        </div>
+                    </div>
+                    <div class="work">
+                        <div class="cases">
+                            <span>3</span><br>
+                            texte 3
+                        </div>
+                        <div class="cases">
+                            <span>4</span><br>
+                            texte 4
+                        </div>
+                    </div>
+            </section>
+        </div>
+        <!-- Contact -->
+        <div class="paragraphe" id="contact">
+            <h2>Nous contacter :</h2>
+        </div>
+        </main>
+        <footer>
+            <button id="back-to-top" title="Retour en haut">↑</button>
+
+            &copy; 2026 TGLP dev - Entreprise de développement informatique. License <a href="LICENSE">MIT</a>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>
