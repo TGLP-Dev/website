@@ -1,3 +1,5 @@
+<img width="497" height="145" alt="logo-blanc-simple" src="https://github.com/user-attachments/assets/87436c96-b27f-49a6-a969-62e361138920" />
+
 # Cahier des charges
 
 ## Consignes
