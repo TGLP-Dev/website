@@ -12,7 +12,7 @@ Pour que votre entreprise ait une meilleure visibilité, vous mettrez en place u
 
  
 Ce site devra être professionnel et valoriser l’entreprise et être fait en HTML et CSS sans intelligence artificielle.  
-**Le code devra être commenté par vos soins. **
+**Le code devra être commenté par vos soins.**
 L’utilisation de git et de Github est obligatoire pour l’hébergement de votre code source. 
 Votre dépôt GitHub devra être public.  
 
