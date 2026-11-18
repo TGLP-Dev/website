@@ -23,20 +23,20 @@ if (window.particlesJS && document.getElementById('particles-js')) {
   window.particlesJS('particles-js', {
     "particles": {
       "number": {
-        "value": 80,
+        "value": 40,
         "density": {
           "enable": true,
           "value_area": 800
         }
       },
       "color": {
-        "value": "#178F85"
+        "value": "#ffffff"
       },
       "shape": {
         "type": "circle",
         "stroke": {
           "width": 0,
-          "color": "#000000"
+          "color": "#ffffff"
         }
       },
       "opacity": {
@@ -62,7 +62,7 @@ if (window.particlesJS && document.getElementById('particles-js')) {
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#38BDF8",
+        "color": "#ffffff",
         "opacity": 0.3,
         "width": 1
       },
@@ -105,7 +105,7 @@ if (window.particlesJS && document.getElementById('particles-js')) {
           "distance": 200,
           "size": 8,
           "duration": 2,
-          "opacity": 0.8,
+          "opacity": 0.4,
           "speed": 3
         },
         "repulse": {
@@ -139,84 +139,3 @@ if (openMenuBtn && closeMenuBtn && sidebar) {
     openMenuBtn.classList.remove('hidden');
   });
 }
-
-const USER = "TitouanGeneve";
-const MONTHS = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
-
-// 1. Nombre de dépôts publics (API officielle GitHub)
-async function loadRepos() {
-  const el = document.getElementById("repo-count");
-  try {
-    const res = await fetch(`https://api.github.com/users/${USER}`);
-    if (!res.ok) throw new Error(res.status);
-    const data = await res.json();
-    el.textContent = data.public_repos;
-  } catch (e) {
-    el.textContent = "indisponible";
-  }
-}
-
-// 2. Graphique des contributions (API publique tierce, sans token)
-async function loadContributions() {
-  const status = document.getElementById("graph-status");
-  try {
-    const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${USER}?y=last`);
-    if (!res.ok) throw new Error(res.status);
-    const data = await res.json();
-    const days = data.contributions;
-    if (!days || !days.length) throw new Error("vide");
-
-    const grid = document.getElementById("grid");
-    const months = document.getElementById("months");
-
-    // Décalage pour aligner le premier jour sur sa ligne (lundi = 0)
-    const firstDow = (new Date(days[0].date + "T00:00:00").getDay() + 6) % 7;
-    for (let i = 0; i < firstDow; i++) {
-      const pad = document.createElement("div");
-      pad.className = "cell empty";
-      grid.appendChild(pad);
-    }
-
-    let total = 0;
-    days.forEach((d, i) => {
-      total += d.count;
-      const cell = document.createElement("div");
-      cell.className = "cell";
-      cell.dataset.level = d.level;
-      const date = new Date(d.date + "T00:00:00").toLocaleDateString("fr-FR", {
-        day: "numeric", month: "long", year: "numeric"
-      });
-      cell.title = `${d.count} contribution${d.count > 1 ? "s" : ""} le ${date}`;
-      grid.appendChild(cell);
-    });
-
-    // Étiquettes des mois (une par colonne de début de mois)
-    const totalCols = Math.ceil((days.length + firstDow) / 7);
-    let lastMonth = -1;
-    for (let col = 0; col < totalCols; col++) {
-      const idx = col * 7 - firstDow;
-      const day = days[Math.max(idx, 0)];
-      const m = new Date(day.date + "T00:00:00").getMonth();
-      const span = document.createElement("span");
-      if (m !== lastMonth && (col > 0 || idx >= 0)) {
-        span.textContent = MONTHS[m];
-        lastMonth = m;
-      }
-      months.appendChild(span);
-    }
-
-    document.getElementById("contrib-total").textContent =
-      (data.total && data.total.lastYear) ?? total;
-
-    status.hidden = true;
-    document.getElementById("graph-wrap").hidden = false;
-    document.getElementById("legend").hidden = false;
-  } catch (e) {
-    status.textContent = "Impossible de charger le graphique de contributions pour le moment.";
-    status.classList.add("error");
-    document.getElementById("contrib-total").textContent = "indisponible";
-  }
-}
-
-loadRepos();
-loadContributions();
