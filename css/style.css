@@ -415,6 +415,53 @@ h2 {
     object-fit: cover;
 }
 
+/* Conteneur principal qui cache ce qui dépasse */
+.slider-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; /* <-- Ajoutez cette ligne pour centrer horizontalement */
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Piste contenant toutes les images */
+.slider-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    /* Animation de défilement continu */
+    animation: defilement 15s linear infinite;
+}
+
+/* Style des images */
+.slider-track img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.slider-track img:hover {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation : déplace la piste de la moitié de sa largeur totale */
+@keyframes defilement {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Note : avec un gap de 30px, la moitié exacte est -15px */
+        transform: translateX(calc(-50% - 15px)); 
+    }
+}
+
+
 /* Contact */
 .contact-link {
     display: inline-block;
@@ -606,20 +653,22 @@ html {
 
 
 .contact-link {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    background: var(--darkcolor);
-    color: var(--ligtcolor);
-    text-decoration: none;
-    border-radius: 8px;
-    align-items: center;
-    font-weight: 600;
-    transition: all 0.3s ease;
+  background: var(--accentcolor1);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .contact-link:hover {
     transform: translateY(-3px);
+    background: var(--accentcolor2);
 }
 
 p {
