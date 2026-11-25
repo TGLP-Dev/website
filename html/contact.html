@@ -1,127 +1,155 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contactez l'équipe TGLP dev pour toute question ou demande d'information.">
-  <link rel="icon" type="image/x-icon" href="../assets/logo/favicon.ico">
-  <link rel="stylesheet" href="../css/style.css">
-  <title>Contact | TGLP dev</title>
-</head>
-<body id="particles-js" class="contact-page">
-  <header class="site-header" id="navbar">
-    <a href="../index.html" aria-label="Accueil TGLP dev">
-      <img src="../assets/images/logo.webp" alt="Logo de TGLP dev" class="logo">
-    </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contactez l'équipe TGLP dev pour toute question ou demande d'information."
+    />
+    <link rel="icon" type="image/x-icon" href="../assets/logo/favicon.ico" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Contact | TGLP dev</title>
+  </head>
+  <body id="particles-js" class="contact-page">
+    <header class="site-header" id="navbar">
+      <a href="../index.html" aria-label="Accueil TGLP dev">
+        <img src="../assets/images/logo.webp" alt="Logo de TGLP dev" class="logo"/>
+      </a>      
+      <nav class="navbar" aria-label="Navigation principale">
+        <a href="../index.html#about" class="navbutton">À propos</a>
+        <a href="../index.html#competences" class="navbutton">Compétences</a>
+        <a href="../index.html#projets" class="navbutton">Projets</a>
+        <a href="../index.html#experiences" class="navbutton">Expériences</a>
+        <a href="../index.html#contact" class="navbutton">Contact</a>
+      </nav>
 
-    <nav class="navbar" aria-label="Navigation principale">
-      <a href="../index.html#about" class="navbutton">À propos</a>
-      <a href="../index.html#competences" class="navbutton">Compétences</a>
-      <a href="../index.html#projets" class="navbutton">Projets</a>
-      <a href="../index.html#experiences" class="navbutton">Expériences</a>
-      <a href="../index.html#contact" class="navbutton">Contact</a>
-    </nav>
-  </header>
+    </header>
 
-  <main class="contact-main">
-    <h1>Contactez-nous</h1>
-    <p class="contact-intro">
-      Une question ou un projet ? Écrivez-nous, nous vous répondrons dès que possible.
-    </p>
+    <main class="contact-main">
+      <h1>Contactez-nous</h1>
+      <p class="contact-intro">
+        Une question ou un projet ? Écrivez-nous, nous vous répondrons dès que
+        possible.
+      </p>
 
-    <div class="contact-layout">
-      <section class="contact-card" aria-labelledby="contact-email-title">
-        <h2 id="contact-email-title">Nos adresses e-mail</h2>
-        <p>Vous pouvez également nous contacter directement par e-mail.</p>
+      <div class="contact-layout">
+        <section class="contact-card" aria-labelledby="contact-email-title">
+          <h2 id="contact-email-title">Nos adresses e-mail</h2>
+          <p>Vous pouvez également nous contacter directement par e-mail.</p>
 
-        <div class="contact-email-list">
-          <a class="contact-email" href="mailto:GENEVE.Titouan@lycee-saintdenis.com">
-            <span class="contact-email-name">Titouan Geneve</span>
-            <span class="contact-email-address">GENEVE.Titouan@lycee-saintdenis.com</span>
-          </a>
+          <div class="contact-email-list">
+            <a
+              class="contact-email"
+              href="mailto:GENEVE.Titouan@lycee-saintdenis.com"
+            >
+              <span class="contact-email-name">Titouan Geneve</span>
+              <span class="contact-email-address"
+                >GENEVE.Titouan@lycee-saintdenis.com</span
+              >
+            </a>
 
-          <a class="contact-email" href="mailto:PORCEILLON.Lucas@lycee-saintdenis.com">
-            <span class="contact-email-name">Lucas Porceillon</span>
-            <span class="contact-email-address">PORCEILLON.Lucas@lycee-saintdenis.com</span>
-          </a>
-        </div>
-      </section>
+            <a
+              class="contact-email"
+              href="mailto:PORCEILLON.Lucas@lycee-saintdenis.com"
+            >
+              <span class="contact-email-name">Lucas Porceillon</span>
+              <span class="contact-email-address"
+                >PORCEILLON.Lucas@lycee-saintdenis.com</span
+              >
+            </a>
+          </div>
+        </section>
 
-      <section class="contact-card" aria-labelledby="contact-form-title">
-        <h2 id="contact-form-title">Envoyer un message</h2>
+        <section class="contact-card" aria-labelledby="contact-form-title">
+          <h2 id="contact-form-title">Envoyer un message</h2>
 
-        <form
-          class="contact-form"
-          id="contactForm"
-          action="https://formspree.io/f/mjywralr"
-          method="POST"
-        >
-          <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
-
-          <label for="contact-name">Nom</label>
-          <input
-            id="contact-name"
-            type="text"
-            name="name"
-            autocomplete="name"
-            placeholder="Votre nom"
-            required
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://formspree.io/f/mjywralr"
+            method="POST"
           >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nouveau message depuis le portfolio"
+            />
 
-          <label for="contact-email">Adresse e-mail</label>
-          <input
-            id="contact-email"
-            type="email"
-            name="email"
-            autocomplete="email"
-            placeholder="vous@exemple.fr"
-            required
-          >
+            <label for="contact-name">Nom</label>
+            <input
+              id="contact-name"
+              type="text"
+              name="name"
+              autocomplete="name"
+              placeholder="Votre nom"
+              required
+            />
 
-          <label for="contact-subject">Sujet</label>
-          <input
-            id="contact-subject"
-            type="text"
-            name="subject"
-            placeholder="Objet de votre message"
-            required
-          >
+            <label for="contact-email">Adresse e-mail</label>
+            <input
+              id="contact-email"
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="vous@exemple.fr"
+              required
+            />
 
-          <label for="contact-message">Message</label>
-          <textarea
-            id="contact-message"
-            name="message"
-            rows="5"
-            placeholder="Votre message"
-            required
-          ></textarea>
+            <label for="contact-subject">Sujet</label>
+            <input
+              id="contact-subject"
+              type="text"
+              name="subject"
+              placeholder="Objet de votre message"
+              required
+            />
 
-          <button type="submit" class="btn-sent">Envoyer le message</button>
-        </form>
-      </section>
-    </div>
+            <label for="contact-message">Message</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="5"
+              placeholder="Votre message"
+              required
+            ></textarea>
 
-    <p class="privacy-notice">
-      Votre nom, votre adresse e-mail, le sujet et le message sont transmis à Formspree
-      pour acheminer votre demande et nous permettre d'y répondre. N'incluez pas
-      d'informations sensibles.
-    </p>
+            <button type="submit" class="btn-sent">Envoyer le message</button>
+          </form>
+        </section>
+      </div>
 
-    <p class="powered-by">
-      Formulaire propulsé par
-      <a href="https://formspree.io/" target="_blank" rel="noopener noreferrer">Formspree</a>.
-    </p>
-  </main>
+      <p class="privacy-notice">
+        Votre nom, votre adresse e-mail, le sujet et le message sont transmis à
+        Formspree pour acheminer votre demande et nous permettre d'y répondre.
+        N'incluez pas d'informations sensibles.
+      </p>
 
-  <footer>
-    <button id="back-to-top" type="button" aria-label="Retour en haut" title="Retour en haut">
-      ↑
-    </button>
-    &copy; 2026 TGLP dev - Entreprise de développement informatique.
-    Licence <a href="../LICENSE">MIT</a>
-  </footer>
+      <p class="powered-by">
+        Formulaire propulsé par
+        <a
+          href="https://formspree.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Formspree</a
+        >.
+      </p>
+    </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="../js/script.js"></script>
-</body>
+    <footer>
+      <button
+        id="back-to-top"
+        type="button"
+        aria-label="Retour en haut"
+        title="Retour en haut"
+      >
+        ↑
+      </button>
+      &copy; 2026 TGLP dev - Entreprise de développement informatique. Licence
+      <a href="../LICENSE">MIT</a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
 </html>
